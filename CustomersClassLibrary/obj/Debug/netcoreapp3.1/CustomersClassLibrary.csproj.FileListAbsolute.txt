@@ -1,0 +1,10 @@
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\obj\Debug\netcoreapp3.1\CustomersClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\obj\Debug\netcoreapp3.1\CustomersClassLibrary.AssemblyInfoInputs.cache
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\obj\Debug\netcoreapp3.1\CustomersClassLibrary.AssemblyInfo.cs
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\obj\Debug\netcoreapp3.1\CustomersClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\bin\Debug\netcoreapp3.1\CustomersClassLibrary.deps.json
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\bin\Debug\netcoreapp3.1\CustomersClassLibrary.dll
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\bin\Debug\netcoreapp3.1\CustomersClassLibrary.pdb
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\obj\Debug\netcoreapp3.1\CustomersClassLibrary.dll
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\obj\Debug\netcoreapp3.1\CustomersClassLibrary.pdb
+C:\Users\dustt\source\repos\CustomersClassLibrary\CustomersClassLibrary\obj\Debug\netcoreapp3.1\CustomersClassLibrary.csproj.AssemblyReference.cache
