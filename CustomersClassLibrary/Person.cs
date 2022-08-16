@@ -7,7 +7,6 @@ namespace CustomersClassLibrary
 {
     public abstract class Person
     {
-        
         private string firstName;
         [Required]
         [StringLength(maximumLength: 50, ErrorMessage = "String should be less than 50 char")]
