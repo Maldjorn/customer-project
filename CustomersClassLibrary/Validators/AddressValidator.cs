@@ -14,6 +14,7 @@ namespace CustomersClassLibrary
             RuleFor(a => a.City).NotEmpty().WithMessage(errorMessages.CityNotEmpty).MaximumLength(50).WithMessage(errorMessages.CityLength);
             RuleFor(a => a.PostalCode).NotEmpty().WithMessage(errorMessages.PostalCodeNotEmpty).MaximumLength(6).WithMessage(errorMessages.PostalCodeNotEmpty);
             RuleFor(a => a.Country).Must(a => avaibleCountries.Contains(a)).WithMessage(errorMessages.InvalidCountry);
+            RuleFor(a => a.State).NotEmpty().WithMessage(errorMessages.StateNotEmpty).MaximumLength(20).WithMessage(errorMessages.StateLength);
 
         }
     }

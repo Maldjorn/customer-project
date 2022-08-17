@@ -1,13 +1,13 @@
 ﻿using CustomersClassLibrary;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using FluentValidation;
+using FluentValidation.TestHelper;
 using Xunit;
 
 namespace CustomersTest
 {
     public class AddressTest
     {
+        AddressValidator addressValidator = new AddressValidator();
         [Fact]
         public void ShouldCreateAddressWithArgs()
         {
@@ -27,13 +27,24 @@ namespace CustomersTest
         }
 
         [Fact]
-        public void ShouldDoAddressValidation()
+        public void ShouldHaveErrorWhenCreateAddress()
         {
-            Address address = new Address() { AddressLine1 = "" };
-            AddressValidator addressValidator = new AddressValidator();
-            var result = addressValidator.AddressValidate(address);
-
-            Assert.Equal("The AddressLine1 field is required.", result[0].ErrorMessage);
+            Address address = new Address()
+            {
+                AddressLine1 = "",
+                AddressLine2 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                City = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                PostalCode = "2222222221",
+                State = "",
+                Country = "N"      
+            };
+            var result = addressValidator.TestValidate(address);
+            result.ShouldHaveValidationErrorFor(address => address.AddressLine1);
+            result.ShouldHaveValidationErrorFor(address => address.AddressLine2);
+            result.ShouldHaveValidationErrorFor(address => address.City);
+            result.ShouldHaveValidationErrorFor(address => address.PostalCode);
+            result.ShouldHaveValidationErrorFor(address => address.State);
+            result.ShouldHaveValidationErrorFor(address => address.Country);
         }
     }
 }

@@ -24,6 +24,8 @@ namespace CustomersClassLibrary
         public readonly string PostalCodeLength = "Maximum length should be no more than 6";
         public readonly string PostalCodeNotEmpty = "Postal code can't be empty";
         public readonly string InvalidCountry = "You can only select the USA or Canada";
+        public readonly string StateNotEmpty = "State can't be empty";
+        public readonly string StateLength = "Maximum length should be no more than 20";
 
     }
 }
