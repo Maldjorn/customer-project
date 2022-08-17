@@ -8,6 +8,7 @@ namespace CustomersTest
 {
     public class AddressTest
     {
+        AddressValidator addressValidator = new AddressValidator();
         [Fact]
         public void ShouldCreateAddressWithArgs()
         {
@@ -29,11 +30,28 @@ namespace CustomersTest
         [Fact]
         public void ShouldDoAddressValidation()
         {
-            Address address = new Address() { AddressLine1 = "" };
-            AddressValidator addressValidator = new AddressValidator();
-            var result = addressValidator.AddressValidate(address);
+            Address address = new Address()
+            {
+                AddressLine1 = "",
+                AddressLine2 = "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+                AddressType = AddressTypes.Unknown,
+                City = "",
+                Country = "France",
+                PostalCode = "",
+                State = ""
+                
+            };
+            List<string> results = new List<string>();
 
-            Assert.Equal("The AddressLine1 field is required.", result[0].ErrorMessage);
+            results = addressValidator.Validate(address);
+
+            Assert.Equal("Invalid first Address Line", results[0]);
+            Assert.Equal("Invalid second Address Line", results[1]);
+            Assert.Equal("Invalid Address Type", results[2]);
+            Assert.Equal("Invalid City", results[3]);
+            Assert.Equal("Invalid Country", results[4]);
+            Assert.Equal("Invalid Postal Code", results[5]);
+            Assert.Equal("Invalid State", results[6]);
         }
     }
 }
