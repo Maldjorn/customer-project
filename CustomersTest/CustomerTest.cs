@@ -19,14 +19,14 @@ namespace CustomersTest
             _customer.CustomerEmail = "name@example.com";
             _customer.Notes = new List<string>() { "Note1", "Note2" };
             _customer.TotalPurchaseAmount = 123;
-            _customer.Adresses = new List<Address>() { new Address() { AddressLine1 = "1"}, new Address() {AddressLine1 = "2" } };
+            _customer.Addresses = new List<Address>() { new Address() { AddressLine1 = "1"}, new Address() {AddressLine1 = "2" } };
             Assert.Equal("John", _customer.FirstName);
             Assert.Equal("Cena", _customer.SecondName);
             Assert.Equal("+14155554345", _customer.PhoneNumber);
             Assert.Equal("name@example.com", _customer.CustomerEmail);
             Assert.Equal("Note1", _customer.Notes[0]);
             Assert.Equal(123, _customer.TotalPurchaseAmount);
-            Assert.Equal(new Address() { AddressLine1 = "1"}.AddressLine1, _customer.Adresses[0].AddressLine1);
+            Assert.Equal(new Address() { AddressLine1 = "1"}.AddressLine1, _customer.Addresses[0].AddressLine1);
         }
 
         [Fact]

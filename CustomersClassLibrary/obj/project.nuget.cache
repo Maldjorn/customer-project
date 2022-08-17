@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mrfaEv8M+7W1RN+2AvVapIg7va/hG6oQV+QabmvBa8uTFkmtFO5UKDq5ThjUe9tBXJLJr0k9WdjR4LAlwAyicQ==",
+  "dgSpecHash": "jB2Yyi0W7BVveA1d4PBZyu3sHNFBsvgoqRzpXB/DkCVgYGx779sxaBrqSqsJU/Ovsc+xwF7ibx7GDG0tuI5tHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dustt\\source\\repos\\CustomersClassLibrary\\CustomersClassLibrary\\CustomersClassLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dustt\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512"
+  ],
   "logs": []
 }
